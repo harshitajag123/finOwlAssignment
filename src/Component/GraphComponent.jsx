@@ -136,13 +136,13 @@ const GraphComponent = () => {
 	const getTicksInterval = (timeRange) => {
 		switch (timeRange) {
 			case "7D":
-				return 1; 
+				return 1;
 			case "1M":
-				return 2; 
+				return 2;
 			case "6M":
-				return 6; 
+				return 10;
 			case "1Y":
-				return 10; 
+				return 15;
 			default:
 				return 1; // Default to 1 tick for unknown ranges
 		}
@@ -215,18 +215,17 @@ const GraphComponent = () => {
 						<Area
 							type="monotone"
 							dataKey="rate"
-							stroke="#00FF7F" 
+							stroke="#00FF7F"
 							fill="url(#shadowGradient)"
-							strokeWidth={2}							
+							strokeWidth={2}
 							activeDot={{
-								fill: "white", 
-								r: 2.5, 
-								
+								fill: "white",
+								r: 2.5,
 							}}
 							// activeShape={{
-							// 	stroke: "#00FF7F", 
+							// 	stroke: "#00FF7F",
 							// 	strokeWidth: 0.3,
-							// 	opacity: 0.9, 
+							// 	opacity: 0.9,
 							// }}
 						/>
 					</AreaChart>
