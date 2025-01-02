@@ -136,13 +136,13 @@ const GraphComponent = () => {
 	const getTicksInterval = (timeRange) => {
 		switch (timeRange) {
 			case "7D":
-				return 1; // Every 1 data point for 7D
+				return 1; 
 			case "1M":
-				return 2; // Every 2 data points for 1M
+				return 2; 
 			case "6M":
-				return 6; // Every 6 data points for 6M
+				return 6; 
 			case "1Y":
-				return 10; // Every 10 data points for 1Y
+				return 10; 
 			default:
 				return 1; // Default to 1 tick for unknown ranges
 		}
